@@ -1,5 +1,5 @@
 from get_data import get_data_from_wb
-from load_data import load_data, get_data_from_bq
+from load_data import load_data, get_data_from_bq_and_save_sheet
 
 from dotenv import load_dotenv
 import os
@@ -14,6 +14,6 @@ dataset_id = os.getenv('DATASET')
 table_id = os.getenv('TABLE')
 
 if __name__ == '__main__':
-    # print(get_data_from_wb(key, path_to_csv))
-    # print(load_data(path_to_cred, project_id, dataset_id, table_id, path_to_csv))
-    print(get_data_from_bq(path_to_cred, project_id))
+    print(get_data_from_wb(key, path_to_csv))
+    print(load_data(path_to_cred, project_id, dataset_id, table_id, path_to_csv))
+    print(get_data_from_bq_and_save_sheet(path_to_cred, project_id))
