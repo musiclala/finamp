@@ -2,8 +2,9 @@ import pygsheets
 from google.cloud import bigquery
 from google.oauth2 import service_account
 
+from dotenv import load_dotenv
 import os
-
+load_dotenv()
 
 def load_data(f_path_to_cred: str,
               f_project_id: str,
